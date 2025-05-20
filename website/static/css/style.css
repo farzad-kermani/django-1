@@ -1,0 +1,45 @@
+body{
+    background-color:aqua;
+}
+
+h1{
+    color: red;
+}
+
+
+/*****شروع استایل های منو******/
+
+.menu {
+    float: left;
+    width: 100%;
+    background-color: #2c3e50;
+
+
+}
+
+.menu li {
+    float: left;
+    list-style: none;
+
+
+}
+
+.menu li a {
+    color: #fff;
+    padding: 20px 30px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu li a:hover{
+    background-color: chocolate;
+    border-radius: 10px;
+}
+
+#hi{
+    color:yellow;
+    padding: 20px 30px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+}

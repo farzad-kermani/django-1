@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Blog</title>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li ><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'blog_list' %}">Blog</a></li>
+            
+            <ul>
+                {% if user.is_authenticated %}
+                    <li id="hi">Hi {{ user.username }}</li>
+                    <li>
+                        <form action="{% url 'logout' %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
+                {% else %}
+                    <li>
+                        <form action="{% url 'login' %}" method="get">
+                            <button type="submit">Login</button>
+                        </form>
+                    </li>
+                {% endif %}
+            </ul>
+                            
+        </ul>
+    </div>
+    
+    {% block content %}
+    
+    {% endblock content %}
+    
+    
+    <div>
+        <h3>Fotter</h3>
+    </div>
+    
+    
+    
+    
+                
+</body>
+</html>
