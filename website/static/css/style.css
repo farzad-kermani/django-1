@@ -1,5 +1,9 @@
 body{
-    background-color:aqua;
+    background-image: url('/static/images/w.jpg');  
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 h1{
